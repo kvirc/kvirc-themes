@@ -1,0 +1,24 @@
+# Pack a single theme
+
+# The theme you want to package
+%szTheme = "Classic"
+
+# The output path
+%szPackageDir = $file.homedir()
+# The name of the package, will be taken from theme name if you leave it empty
+%szPackageName = ""
+# The version of the package, will be taken from theme version if you leave it empty
+%szPackageVersion = ""
+# The description, will be taken from theme description if you leave it empty
+%szPackageDescription = ""
+# The author, will be taken from theme author if you leave it empty
+%szPackageAuthor = ""
+
+################################################################################################
+
+include "pack-utils.kvs"
+
+%dir = $file.extractPath($0)
+
+pack_single_theme %dir/%szTheme %szPackageDir %szPackageName %szPackageVersion %szPackageDescription %szPackageAuthor
+

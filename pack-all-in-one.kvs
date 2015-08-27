@@ -1,0 +1,54 @@
+# Pack all themes in a single package
+
+# The output path
+%szPackagePath = $file.homedir(KVIrc-Giant-Theme-Pack-1.0.0.kvt)
+# The name of the package
+%szPackageName = "KVIrc Giant Theme Pack"
+# The version of the package
+%szPackageVersion = "1.0.0"
+# The description of the themes package
+%szPackageDescription = "A big fat pack of themes"
+# The author
+%szPackageAuthor = "Szymon Tomasz Stefanek"
+# You can put a path to an image here, it will be used as package presentation image
+%szPackageImage = ""
+
+################################################################################################
+
+%dir = $file.extractPath($0)
+
+echo "Packing all themes in directory %dir"
+
+%aDirs = $file.ls(%dir,d)
+
+%aPaths = $array()
+
+foreach(%d,%aDirs)
+{
+	if(%d == "." || %d == "..")
+		continue;
+
+	echo "Theme directory %d"
+
+	%inf = $theme.info(%dir/%d);
+	
+	if(%inf{"name"} == "")
+		continue;
+	if(%inf{"version"} == "")
+		continue;
+
+	echo "Theme name is "%inf{"name"}
+	echo "Theme version is "%inf{"version"}
+	
+	%aPaths <+ %dir/%d
+}
+
+theme.pack \
+	%szPackagePath \
+	%szPackageName \
+	%szPackageVersion \
+	%szPackageDescription \
+	%szPackageAuthor \
+	%szPackageImage \
+	%aPaths
+

@@ -1,0 +1,44 @@
+# Pack a single theme
+
+# The theme you want to package
+%szTheme = "Classic"
+
+# The output path
+%szPackageDir = $file.homedir()
+# The author, will be taken from theme author if you leave it empty
+%szPackageAuthor = ""
+
+################################################################################################
+
+include "pack-utils.kvs"
+
+%dir = $file.extractPath($0)
+
+echo "Packing all themes in directory %dir"
+
+%aDirs = $file.ls(%dir,d)
+
+%aPaths = $array()
+
+foreach(%d,%aDirs)
+{
+	if(%d == "." || %d == "..")
+		continue;
+
+	echo "Theme directory %d"
+
+	%inf = $theme.info(%dir/%d);
+	
+	if(%inf{"name"} == "")
+		continue;
+	if(%inf{"version"} == "")
+		continue;
+
+	echo "Theme name is "%inf{"name"}
+	echo "Theme version is "%inf{"version"}
+	
+	pack_single_theme %dir/%d %szPackageDir "" "" "" %szPackageAuthor
+}
+
+
+

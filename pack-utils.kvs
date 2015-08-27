@@ -1,0 +1,61 @@
+# Theme packing utilities
+
+function(pack_single_theme)
+{
+	%szInputPath = $0
+	%szOutputDir = $1
+	%szPackageName = $2
+	%szPackageVersion = $3
+	%szPackageDescription = $4
+	%szPackageAuthor = $5
+
+	echo "Attempting to pack theme at" %szInputPath
+
+	%inf = $theme.info(%szInputPath);
+		
+	if(%inf{"name"} == "")
+	{
+		echo "ERROR: Invalid theme in %szInputPath (empty name)"
+		return 
+	}
+
+	if(%inf{"version"} == "")
+	{
+		echo "ERROR: Invalid theme in %szInputPath (empty version)"
+		return 
+	}
+	
+	echo "Theme name is "%inf{"name"}
+	echo "Theme version is "%inf{"version"}
+	
+	if(%szPackageName == "")
+		%szPackageName = %inf{"name"};
+	if(%szPackageVersion == "")
+		%szPackageVersion = %inf{"version"};
+	if(%szPackageDescription == "")
+		%szPackageDescription = %inf{"description"};
+	if(%szPackageAuthor == "")
+		%szPackageAuthor = %inf{"author"};
+	
+	if($file.exists(%szInputPath/screenshot_medium.png))
+		%szPackageImage = %szInputPath/screenshot_medium.png
+	else if($file.exists(%szInputPath/screenshot.png))
+		%szPackageImage = %szInputPath/screenshot.png
+	else
+		%szPackageImage = ""
+	
+	%szOutPath = %szOutputDir/%szTheme-%szPackageVersion.kvt
+	
+	theme.pack \
+		%szOutPath \
+		%szPackageName \
+		%szPackageVersion \
+		%szPackageDescription \
+		%szPackageAuthor \
+		%szPackageImage \
+		%szInputPath
+	
+	echo "Package is ready at" %szOutPath "("$file.size(%szOutPath) "bytes)"
+}
+
+
