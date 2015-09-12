@@ -1,0 +1,9 @@
+# KVIrc configuration file
+[ThemeInfo]
+Date=Sat%20Sep%2012%2002:42:35%202015
+Name=I/O-Dark
+Version=2.1.5
+Author=universal
+ThemeEngineVersion=1.0.0
+Description=A%20balanced,%20simple%20dark%20grey%20theme%20with%20soft%20color%20scheme,%20to%20maximize%20readability.%0aYou%20can%20further%20modify%20it%20to%20suit%20your%20particular%20taste.%0a%0aThis%20theme%20was%20designed%20to%20work%20with%20with%20KVIrc%204.3.2%0a%0aOther%20themes%20in%20this%20series%20include:%0aI/O-Light%20and%20I/O-Black.%0a%0aEnjoy.
+Application=KVIrc%204.3.2.20150910
