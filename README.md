@@ -11,7 +11,7 @@ We are looking for theme authors to submit fresh new themes compatible with KVIr
 The themes should be in a **UNPACKED** form, the directories that
 KVIrc produces by a simple *Save Theme* operation.
 
-[Fork this repository] and submit your theme via [Pull request}(https://help.github.com/articles/using-pull-requests/).
+[Fork this repository](https://github.com/kvirc/kvirc-themes/for/) and submit your theme(s) via a [pull request](https://help.github.com/articles/using-pull-requests/).
 
 ### Licensing
 
@@ -22,7 +22,7 @@ As the author of the work, you have complete freedom to choose what licensing mo
 best suits you and the works submitted.
 
 We recommend [Open Source](http://opensource.org/licenses/category) compatible licences, and in the cases where you don't specify a licence,
-you understand that the default **[GPLv2](http://opensource.org/licenses/GPL-2.0)** licence is automatically implied when your submission is merged.
+you understand that the default **[GPLv2](http://opensource.org/licenses/GPL-2.0)** licence is automatically applied to your submission once its merged.
 
 :boom: If you are not the author of the icons or artwork included with your themes, please ensure you are respecting the authors copyright or any licensing terms and have permission to use and redistribute their works and include such licences with your submission.
 
