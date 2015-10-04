@@ -1,7 +1,4 @@
-# Pack a single theme
-
-# The theme you want to package
-%szTheme = "Classic"
+# Pack all the themes in the directory this script is placed in.
 
 # The output path
 %szPackageDir = $file.homedir()
@@ -37,7 +34,7 @@ foreach(%d,%aDirs)
 	echo "Theme name is "%inf{"name"}
 	echo "Theme version is "%inf{"version"}
 	
-	pack_single_theme %dir/%d %szPackageDir "" "" "" %szPackageAuthor
+	theme::packager::packOne %dir/%d %szPackageDir "" "" "" %szPackageAuthor
 }
 
 

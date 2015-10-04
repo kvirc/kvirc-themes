@@ -1,0 +1,17 @@
+# Release a theme.
+#
+# Also dump a template php array containing the theme informations
+# in a format suitable for adding in kvirc-www/services/themes.php.
+# Also extract the theme image, if possible.
+#
+# Execute with:
+#
+#   kvirc -e "parse release-theme.kvs /full/path/to/*.kvt"
+
+include "pack-utils.kvs"
+
+%dir = $file.extractPath($0)
+
+theme::packager::releaseTheme $1 %dir
+
+

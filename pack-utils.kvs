@@ -1,42 +1,39 @@
 # Theme packing utilities
 
-function(pack_single_theme)
+function(theme::packager::echo)
+{
+	debug -s $0-
+}
+
+function(theme::packager::packOne)
 {
 	%szInputPath = $0
 	%szOutputDir = $1
-	%szPackageName = $2
-	%szPackageVersion = $3
-	%szPackageDescription = $4
-	%szPackageAuthor = $5
 
-	echo "Attempting to pack theme at" %szInputPath
+	theme::packager::echo "Attempting to pack theme at" %szInputPath
 
 	%inf = $theme.info(%szInputPath);
 		
 	if(%inf{"name"} == "")
 	{
-		echo "ERROR: Invalid theme in %szInputPath (empty name)"
+		theme::packager::echo "ERROR: Invalid theme in %szInputPath (empty name)"
 		return 
 	}
 
 	if(%inf{"version"} == "")
 	{
-		echo "ERROR: Invalid theme in %szInputPath (empty version)"
+		theme::packager::echo "ERROR: Invalid theme in %szInputPath (empty version)"
 		return 
 	}
 	
-	echo "Theme name is "%inf{"name"}
-	echo "Theme version is "%inf{"version"}
-	
-	if(%szPackageName == "")
-		%szPackageName = %inf{"name"};
-	if(%szPackageVersion == "")
-		%szPackageVersion = %inf{"version"};
-	if(%szPackageDescription == "")
-		%szPackageDescription = %inf{"description"};
-	if(%szPackageAuthor == "")
-		%szPackageAuthor = %inf{"author"};
-	
+	theme::packager::echo "Theme name is "%inf{"name"}
+	theme::packager::echo "Theme version is "%inf{"version"}
+
+	%szPackageName = %inf{"name"};
+	%szPackageVersion = %inf{"version"};
+	%szPackageDescription = %inf{"description"};
+	%szPackageAuthor = %inf{"author"};
+
 	if($file.exists(%szInputPath/screenshot_medium.png))
 		%szPackageImage = %szInputPath/screenshot_medium.png
 	else if($file.exists(%szInputPath/screenshot.png))
@@ -44,7 +41,7 @@ function(pack_single_theme)
 	else
 		%szPackageImage = ""
 	
-	%szOutPath = %szOutputDir/%szTheme-%szPackageVersion.kvt
+	%szOutPath = %szOutputDir/%szPackageName-%szPackageVersion.kvt
 	
 	theme.pack \
 		%szOutPath \
@@ -55,7 +52,78 @@ function(pack_single_theme)
 		%szPackageImage \
 		%szInputPath
 	
-	echo "Package is ready at" %szOutPath "("$file.size(%szOutPath) "bytes)"
+	theme::packager::echo "Package is ready at" %szOutPath "("$file.size(%szOutPath) "bytes)"
 }
 
 
+function(theme::packager::releaseTheme)
+{
+	%szInputPackagePath = $0
+	%szOutputPath = $1
+
+	%inf = $package.info(%szInputPackagePath)
+	
+	theme::packager::echo ""
+
+	theme::packager::echo "Attempting to release the theme package at %szInputPackagePath into %szOutputPath"
+	
+	%subdir = $date(YmdHMS);
+	
+	%dir = %szOutputPath/%subdir
+
+	if(%inf{error} != "")
+	{
+		theme::packager::echo "ERROR: Could not read package $1"
+		theme::packager::echo "ERROR: "%inf{error}
+		return;
+	}
+	
+	file.mkdir -q %dir
+	
+	theme::packager::echo "Creating directory %dir"
+
+	%file = $file.extractfilename(%szInputPackagePath);
+
+	file.copy %szInputPackagePath %dir/%file
+
+	theme::packager::echo "Theme entry for kvirc-www/services/themes.php"
+	theme::packager::echo ""
+	
+	theme::packager::echo "	array("
+	theme::packager::echo "			'package' => '"%inf{info}{name}"',"
+	theme::packager::echo "			'size' => '"%inf{info}{size}"',"
+	theme::packager::echo "			'name' => '"%inf{metadata}{Name}"',"
+	theme::packager::echo "			'author' => '"%inf{metadata}{Author}"',"
+	theme::packager::echo "			'date' => '"%inf{metadata}{Date}"',"
+	theme::packager::echo "			'description' => '"%inf{metadata}{Description}"',"
+	theme::packager::echo "			'file' => '"%subdir/%file"',"
+	theme::packager::echo "			'image' => '"%subdir/image.png"',"
+	theme::packager::echo "			'themes' => array("
+	theme::packager::echo "				)"
+	theme::packager::echo "		)"
+	
+	theme::packager::echo ""
+	
+	/*
+	Metadata:
+	* Application: KVIrc 4.3.2.20151002
+	* Author: Szymon Tomasz Stefanek
+	* Date: 2015-10-04T02:02:23
+	* Description: The set of icons and colors used in early 4.x releases.
+	* Image: <binary data, 51872 bytes>
+	* Name: Classic
+	* PackageType: ThemePack
+	* Theme0Application: KVIrc 4.3.2.20141230
+	* Theme0Author: Szymon Tomasz Stefanek
+	* Theme0Date: Wed Aug 26 01:47:39 2015
+	* Theme0Description: The set of icons and colors used in early 4.x releases.
+	* Theme0Name: Classic
+	* Theme0Screenshot: <binary data, 52663 bytes>
+	* Theme0Subdirectory: Classic-1.0.0
+	* Theme0ThemeEngineVersion: 1.0.0
+	* Theme0Version: 1.0.0
+	* ThemeCount: 1
+	* ThemePackVersion: 1.0.0
+	* Version: 1.0.0
+	*/
+}
