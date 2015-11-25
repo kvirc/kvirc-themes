@@ -11,12 +11,14 @@ We are looking for theme authors to submit fresh new themes compatible with KVIr
 The themes should be in a **UNPACKED** form, the directories that
 KVIrc produces by a simple *Save Theme* operation.
 
-[Fork this repository](https://github.com/kvirc/kvirc-themes/for/) and submit your theme(s) via a [pull request](https://help.github.com/articles/using-pull-requests/).
+- [Fork this repository](https://github.com/kvirc/kvirc-themes/for/) and submit your theme(s) via a [pull request](https://help.github.com/articles/using-pull-requests/).
 
-### Licensing
+- [Contributing to a KVIrc repository](https://github.com/kvirc/KVIrc/wiki/Contributing-code-to-KVIrc's-repository)
+
+### Themes and icon / artwork licensing
 
 All works submitted to KVIrc themes repository should contain an accompanying licence. 
-Especially if your theme includes user made icons or artwork or that is sourced by you for inclusion. :boom:
+Especially if your theme includes user made icons or artwork or that has been sourced by you for inclusion. :boom:
 
 As the author of the work, you have complete freedom to choose what licensing model which
 best suits you and the works submitted.
@@ -28,7 +30,7 @@ you understand that the default **[GPLv2](http://opensource.org/licenses/GPL-2.0
 
 ### Inclusion of icons
 
-Currently KVIrc *4.3.2* has a complete set of **[327 coresmall icons](https://github.com/kvirc/KVIrc/blob/ff1672c25c25a994d92ab44e6242ff85ba99f17f/src/kvirc/kernel/KviIconManager.h#L495)** plus **60** large icons.
+Currently KVIrc *4.3.2* has a complete set of **[335 coresmall icons](https://github.com/kvirc/KVIrc/blob/master/src/kvirc/kernel/KviIconManager.h#L503)** plus around **60** large icons and other buttons.
 
 By default the *Save Theme* operation will optionally copy the core icons into your theme's directory where none exist.
 
@@ -46,4 +48,4 @@ Any specific icons you submit with your theme are automatically loaded preferent
 
 * [KVIrc development](https://github.com/kvirc/KVIrc)
 * [KVIrc scripts](https://github.com/kvirc/kvirc-scripts)
-* [KVIrc WWW](https://github.com/kvirc/kvirc-www)
+* [KVIrc website repository](https://github.com/kvirc/kvirc-www)
