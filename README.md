@@ -4,7 +4,7 @@
 Welcome to the official Git repository for KVIrc themes.  
 Share your KVIrc themes with your fellow users.
 
-We are looking for theme authors to submit fresh new themes compatible with KVIrc **4.3.2** and to revamp existing themes and submit them back here.
+We are looking for theme authors to submit fresh new themes compatible with KVIrc **4.9.1** and to revamp existing themes and submit them back here.
 
 ### Theme submission
 
@@ -30,7 +30,7 @@ you understand that the default **[GPLv2](http://opensource.org/licenses/GPL-2.0
 
 ### Inclusion of icons
 
-Currently KVIrc *4.3.2* has a complete set of **[335 coresmall icons](https://github.com/kvirc/KVIrc/blob/master/src/kvirc/kernel/KviIconManager.h#L503)** plus around **60** large icons and other buttons.
+Currently KVIrc has a complete set of **[335 coresmall icons](https://github.com/kvirc/KVIrc/blob/master/src/kvirc/kernel/KviIconManager.h#L503)** plus around **60** large icons and other buttons and a many other varied images.
 
 By default the *Save Theme* operation will optionally copy the core icons into your theme's directory where none exist.
 
