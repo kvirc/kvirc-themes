@@ -126,4 +126,50 @@ function(theme::packager::releaseTheme)
 	* ThemePackVersion: 1.0.0
 	* Version: 1.0.0
 	*/
+
+	/*
+	Metadata:
+	* Application: KVIrc 4.9.1.20160102
+	* Author: swarfega
+	* Date: 2015-10-04T02:02:23
+	* Description: The set of icons and colors used in early 4.x releases.
+	* Image: <binary data, 51872 bytes>
+	* Name: VoidLight
+	* PackageType: ThemePack
+	* Theme0Application: KVIrc 4.9.1.20160102
+	* Theme0Author: Szymon Tomasz Stefanek
+	* Theme0Date: Wed Aug 26 01:47:39 2015
+	* Theme0Description: The set of icons and colors used in early 4.x releases.
+	* Theme0Name: Classic
+	* Theme0Screenshot: <binary data, 52663 bytes>
+	* Theme0Subdirectory: Classic-1.0.0
+	* Theme0ThemeEngineVersion: 1.0.0
+	* Theme0Version: 1.0.0
+	* ThemeCount: 1
+	* ThemePackVersion: 1.0.0
+	* Version: 1.0.0
+	*/
+
+	/*
+	Metadata:
+	* Application: KVIrc 4.9.1.20160102
+	* Author: swarfega
+	* Date: 2015-10-04T02:02:23
+	* Description: The set of icons and colors used in early 4.x releases.
+	* Image: <binary data, 150219 bytes>
+	* Name: VoidDark
+	* PackageType: ThemePack
+	* Theme0Application: KVIrc 4.9.1.20160102
+	* Theme0Author: swarfega
+	* Theme0Date: Wed Aug 26 01:47:39 2015
+	* Theme0Description: The set of icons and colors used in early 4.x releases.
+	* Theme0Name: VoidDark
+	* Theme0Screenshot: <binary data, 150219 bytes>
+	* Theme0Subdirectory: VoidDark-1.0.2
+	* Theme0ThemeEngineVersion: 1.1.0
+	* Theme0Version: 1.0.2
+	* ThemeCount: 1
+	* ThemePackVersion: 1.0.0
+	* Version: 1.0.0
+	*/
 }
