@@ -4,7 +4,7 @@
 Welcome to the official Git repository for KVIrc themes.  
 Share your KVIrc themes with your fellow users.
 
-We are looking for theme authors to submit fresh new themes compatible with KVIrc **4.9.1** and to revamp existing themes and submit them back here.
+We are looking for theme authors to submit fresh new themes compatible with KVIrc **4.9.2** and to revamp existing themes and submit them back here.
 
 ### Theme submission
 
