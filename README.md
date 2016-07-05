@@ -30,7 +30,7 @@ you understand that the default **[GPLv2](http://opensource.org/licenses/GPL-2.0
 
 ### Inclusion of icons
 
-Currently KVIrc has a complete set of **[335 coresmall icons](https://github.com/kvirc/KVIrc/blob/master/src/kvirc/kernel/KviIconManager.h#L503)** plus around **60** large icons and other buttons and a many other varied images.
+Currently KVIrc has a complete set of **[337 coresmall icons](https://github.com/kvirc/KVIrc/blob/master/src/kvirc/kernel/KviIconManager.h#L506)** plus around **60** large icons and other buttons and a many other varied images.
 
 By default the *Save Theme* operation will optionally copy the core icons into your theme's directory where none exist.
 
