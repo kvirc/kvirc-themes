@@ -1,0 +1,9 @@
+# KVIrc configuration file
+[ThemeInfo]
+ThemeEngineVersion=1.0.0
+Author=Sbrokka
+Version=1.0.4
+Name=Marble
+KvircVersion=KVIrc%203.0.0%20"Awakening"%20by%20Szymon%20Stefanek
+Date=Thu%20Apr%201%2021:22:47%202004
+Description=Theme%20based%20on%20the%20Marble%20icon%20set
