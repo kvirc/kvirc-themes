@@ -1,0 +1,9 @@
+# KVIrc configuration file
+[ThemeInfo]
+ThemeEngineVersion=1.0.0
+Application=KVIrc%203.2.6.20070201
+Author=Andrea%20Puk%20Colombo
+Version=0.9.0
+Name=DarkBlue
+Date=gio%208.%20feb%2021:29:46%202007
+Description=Dark%20theme%20based%20on%20blue

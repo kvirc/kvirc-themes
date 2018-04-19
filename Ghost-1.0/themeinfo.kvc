@@ -1,0 +1,9 @@
+# KVIrc configuration file
+[ThemeInfo]
+ThemeEngineVersion=1.0.0
+Author=DarkStalker
+Version=1.0
+Name=Ghost
+KvircVersion=KVIrc%203.0.0%20"Awakening"%20by%20Szymon%20Stefanek
+Date=Sun%20Apr%2018%2021:31:09%202004
+Description=A%20transparent%20theme%20meant%20mainly%20for%20use%20with%20the%20KDE%20background.%20Set%20for%20good%20visibility%20and%20contrast.

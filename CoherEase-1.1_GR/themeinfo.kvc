@@ -1,0 +1,9 @@
+# KVIrc configuration file
+[ThemeInfo]
+Date=Fri%20Mar%2019%2023:11:57%202010
+Name=CoherEase
+Version=1.1%20GR
+Author=Chapoolin
+ThemeEngineVersion=1.0.0
+Description=Easy-on-eyes%20refreshing%20waterfall%20%20wallpaper%20...%20diffused%20with%20light%20%20turquoise%20transparency.%0a%0aCOHERENT%20COLORS:%20Where%20is%20that%20%20message%20from?%20%20the%20OS?%20%20the%20socket?%20%20the%20server?%20%20from%20NickServ?%20%20Now%20one%20%20can%20tell%20by%20the%20background%20color%20of%20%20messages---colors%20COHERENT%20to%20%20subsystem%20that%20issues%20the%20message%20(as%20%20much%20as%20possible%20:)%20%20Black%20=%20oper.%20sys.;%20%20dark%20blue%20=%20sockets;%20light%20blue%20=%20server;%20%20teal%20=%20NickServer;%20green%20=%20CTCP;%20etc.%0a%0aWallpaper%20creator:%0ahttp://picasaweb.google.com/lh/view?uname=baylie336&cuname=baylie336&tags=sample#5326748477842929666%0a%0aWallpaper%20license:%0ahttp://creativecommons.org/licenses/by-nc/3.0/%0a
+Application=KVIrc%203.4.2.20081014

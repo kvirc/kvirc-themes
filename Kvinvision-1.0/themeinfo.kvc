@@ -1,0 +1,9 @@
+# KVIrc configuration file
+[ThemeInfo]
+ThemeEngineVersion=1.0.0
+Author=LoSko
+Version=1
+Name=Kvinvision
+KvircVersion=3.2.2
+Date=sab%2022.%20apr%2017:14:20%202006
+Description=A%20theme%20like%20the%20Invision%20for%20mIRC
